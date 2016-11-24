@@ -7,6 +7,10 @@ try:
     nombre  = str(raw_input('Permitame su nombre caballero:'))
     apellidos = str(raw_input('Permitame su apellidos'))
     profesion =  str(raw_input('Permitame su profesion caballero'))
+    calle =  str(raw_input('Permitame su profesion calle'))
+    num_int = str(raw_input('Permitame su numero interior'))
+    colonia  = str(raw_input('Permitame su colonia'))
+    ciudad =  str(raw_input('Permitame su ciudad caballero'))
     for x in range(0,5):
         amigo = str(raw_input('como se llama su nombre de su amigo'))
         amigos.append(str(amigo))
@@ -16,7 +20,13 @@ persona = {
     "nombre": nombre, 
     "apellidos": apellidos,
     "profesion" :profesion,
-    "amigos": amigos
+    "amigos": amigos, 
+    "direccion" : { 
+        "ciudad" : ciudad, 
+        "calle" : calle, 
+        "numero_interior" : num_int, 
+        "colonia": colonia, 
+    },
 }
 db = client.starwars 
 db.Jedis.insert(persona)
