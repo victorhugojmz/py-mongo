@@ -4,12 +4,14 @@ print ("Hello World!")
 print("I love Python and MongoDB")
 try: 
     nombre  = str(raw_input('Permitame su nombre caballero:'))
-    appellido = str(raw_input('Permitame su apellidos'))
+    apellidos = str(raw_input('Permitame su apellidos'))
     profesion =  str(raw_input('Permitame su profesion caballero'))
 except ValueError: 
     print "No es un string"
 persona = {
-    "nombre": nombre 
+    "nombre": nombre, 
+    "apellidos": apellidos,
+    "profesion" :profesion 
 }
 db = client.starwars 
 db.Jedis.insert(persona)
